@@ -9,11 +9,14 @@ const initialState = {
     },
     zoom: 0
   };
+
+
 const SimpleMap = () => {
  const [mapProps, _] = useState(()=>initialState)
 
   return (
-    <div>     <div style={{ height: '100vh', width: '100%' }}>
+    <div>    
+         <div style={{ height: '100vh', width: '100%' }}>
     <GoogleMapReact
       bootstrapURLKeys={{ key: GoogleApiKey}}
       defaultCenter={mapProps.center}
