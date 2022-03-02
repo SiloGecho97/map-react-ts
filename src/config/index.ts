@@ -1,3 +1,2 @@
-require('dotenv').config()
 
-export const GoogleApiKey = process.env.NODE_ENV
+export const GoogleApiKey:string = process.env.GOOGLE_API_KEY || ''
