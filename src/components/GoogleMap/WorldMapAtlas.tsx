@@ -5,9 +5,10 @@ import { Feature, FeatureCollection, Geometry } from 'geojson'
 
 const uuid = require('react-uuid')
 
-const scale: number = 120
-const cx: number = 200
-const cy: number = 200
+const scale: number = 180
+const cx: number = 300
+const cy: number = 300
+const countriesUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
 const WorldMapAtlas = () => {
   const [geographies, setGeographies] = useState<[] | Array<Feature<Geometry | null>>>([])
@@ -30,7 +31,7 @@ const WorldMapAtlas = () => {
 
   return (
     <>
-      <svg width={scale * 10} height={scale * 10} viewBox="0 0 800 450">
+      <svg width={scale * 6} height={scale * 6} viewBox="0 0 800 450">
         <g>
           {(geographies as []).map((d, i) => (
             <path
